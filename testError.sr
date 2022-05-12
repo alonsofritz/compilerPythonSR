@@ -1,0 +1,12 @@
+if ( varUm > 10) {
+    read(variavelString);
+}
+else {
+    write(10);
+}
+
+## Erros
+
+for ( i = 0, i < 10, i =  ) { 
+    write(variavelString);
+}

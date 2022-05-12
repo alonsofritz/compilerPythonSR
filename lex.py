@@ -4,15 +4,16 @@ import string
 import terminals
 import tokens
 
-## Analisador Léxico
-## Linguagem: Simple Rick's
+# Analisador Léxico
+# Linguagem: Simple Rick's
+
 
 class Lex():
 
     tokens_list = []
 
     def __init__(self):
-        self.input_file = "teste00.sr"
+        self.input_file = "testCorrect.sr"
         self.output_file = "lex_output.txt"
 
     def isDelimiter(self, char):
@@ -221,7 +222,7 @@ class Lex():
 
                 elif current_char != '\n' and current_char != ' ' and current_char != '\t' and current_char != '\r':
                     output_file.write(
-                            'Erro Lexico - Caractere Inválido - Linha: %d\n' % line_number)
+                        'Erro Lexico - Caractere Inválido - Linha: %d\n' % line_number)
                     break
 
                 column += 1
@@ -238,7 +239,7 @@ class Lex():
         output_file.close()
         self.pushTokens()
         print("\n")
-        self.printTokenList()
+        # self.printTokenList()
 
     def pushTokens(self):
         f = open(self.output_file, 'r')
@@ -261,11 +262,12 @@ class Lex():
             l.clear()
 
         f.close()
-        #os.remove(self.output_file)
+        # os.remove(self.output_file)
 
     def printTokenList(self):
         for x in self.tokens_list:
             print(x)
 
-lex = Lex()
-lex.start()
+# Inicializador Léxico Individual
+# lex = Lex()
+# lex.start()
